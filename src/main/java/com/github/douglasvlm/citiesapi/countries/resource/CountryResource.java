@@ -1,7 +1,7 @@
-package com.github.douglasvlm.citiesapi;
+package com.github.douglasvlm.citiesapi.countries.resource;
 
-import com.github.douglasvlm.citiesapi.countries.Country;
-import com.github.douglasvlm.citiesapi.repository.CountryRepository;
+import com.github.douglasvlm.citiesapi.countries.entity.Country;
+import com.github.douglasvlm.citiesapi.countries.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +23,6 @@ public class CountryResource {
 
     @GetMapping
     public Page<Country> countries(Pageable page){
-
         return repository.findAll(page);
     }
 

@@ -1,4 +1,4 @@
-package com.github.douglasvlm.citiesapi.countries;
+package com.github.douglasvlm.citiesapi.countries.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

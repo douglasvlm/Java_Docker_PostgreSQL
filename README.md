@@ -63,3 +63,19 @@ select earth_distance(
     ll_to_earth(-22.01740074157715,-47.88600158691406)
 ) as distance;
 ```
+
+###Heroku
+heroku addons:create heroku-postgresql
+
+#Enter containner bash
+```shell
+#heroku
+docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
+
+psql -h heroku.database-utrl -U user_database name_database -f /tmp/pais.sql
+psql -h heroku.database-utrl -U user_database name_database -f /tmp/estado.sql
+psql -h heroku.database-utrl -U user_database name_database -f /tmp/cidade.sql
+psql -h heroku.database-utrl -U user_database name_database -f
+CREATE EXTENSION cube; 
+CREATE EXTENSION earthdistance;
+```

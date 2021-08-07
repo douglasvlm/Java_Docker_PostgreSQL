@@ -49,6 +49,7 @@ psql -h localhost -U postgres_user_city cities
 CREATE EXTENSION cube; 
 CREATE EXTENSION earthdistance;
 # http://localhost:8080/distances/by-points?from=4929&to=5254
+# http://localhost:8080/distances/by-cube?from=4929&to=5254
 
 ### Query Earth Distance
 Point
@@ -72,10 +73,16 @@ heroku addons:create heroku-postgresql
 #heroku
 docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
 
-psql -h heroku.database-utrl -U user_database name_database -f /tmp/pais.sql
-psql -h heroku.database-utrl -U user_database name_database -f /tmp/estado.sql
-psql -h heroku.database-utrl -U user_database name_database -f /tmp/cidade.sql
-psql -h heroku.database-utrl -U user_database name_database -f
+psql -h heroku.database-url -U user_database name_database -f /tmp/pais.sql
+psql -h heroku.database-url -U user_database name_database -f /tmp/estado.sql
+psql -h heroku.database-url -U user_database name_database -f /tmp/cidade.sql
+psql -h heroku.database-url -U user_database name_database -f
 CREATE EXTENSION cube; 
 CREATE EXTENSION earthdistance;
 ```
+https://murmuring-castle-80052.herokuapp.com/cities
+https://murmuring-castle-80052.herokuapp.com/states
+https://murmuring-castle-80052.herokuapp.com/countries
+https://murmuring-castle-80052.herokuapp.com/distances/by-points?from=4929&to=5254
+https://murmuring-castle-80052.herokuapp.com/distances/by-cube?from=4929&to=5254
+https://murmuring-castle-80052.herokuapp.com/swagger-ui.html

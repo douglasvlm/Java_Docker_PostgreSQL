@@ -80,5 +80,3 @@ https://murmuring-castle-80052.herokuapp.com/countries
 https://murmuring-castle-80052.herokuapp.com/distances/by-points?from=4929&to=5254
 
 https://murmuring-castle-80052.herokuapp.com/distances/by-cube?from=4929&to=5254
-
-https://murmuring-castle-80052.herokuapp.com/swagger-ui.html

@@ -22,4 +22,4 @@ public class StateResource {
     public List<State> staties() {
         return repository.findAll();
     }
-}
+}//

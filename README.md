@@ -57,17 +57,8 @@ Point
 select ((select lat_lon from cidade where id = 4929) <@> (select lat_lon from cidade where id=5254)) as distance;
 ```
 
-Cube
-```roomsql
-select earth_distance(
-    ll_to_earth(-21.95840072631836,-47.98820114135742), 
-    ll_to_earth(-22.01740074157715,-47.88600158691406)
-) as distance;
-```
-
 ###Heroku
 heroku addons:create heroku-postgresql
-
 #Enter containner bash
 ```shell
 #heroku
@@ -81,8 +72,13 @@ CREATE EXTENSION cube;
 CREATE EXTENSION earthdistance;
 ```
 https://murmuring-castle-80052.herokuapp.com/cities
+
 https://murmuring-castle-80052.herokuapp.com/states
+
 https://murmuring-castle-80052.herokuapp.com/countries
+
 https://murmuring-castle-80052.herokuapp.com/distances/by-points?from=4929&to=5254
+
 https://murmuring-castle-80052.herokuapp.com/distances/by-cube?from=4929&to=5254
+
 https://murmuring-castle-80052.herokuapp.com/swagger-ui.html

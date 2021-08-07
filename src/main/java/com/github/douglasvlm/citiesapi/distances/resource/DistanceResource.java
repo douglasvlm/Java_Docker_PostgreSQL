@@ -40,5 +40,5 @@ public class DistanceResource {
 //                         @RequestParam final EarthRadius unit) {
 //        log.info("byMath");
 //        return service.distanceUsingMath(city1, city2, unit);
-//    }
+///    }
 }

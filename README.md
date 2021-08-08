@@ -25,7 +25,7 @@ docker run --name cities-db -d -p 5432:5432 -e POSTGRES_USER=postgres_user_city 
 ```
 
 ### Populate
-#####Tables
+##### Tables
 * [data](https://github.com/chinnonsantos/sql-paises-estados-cidades/tree/master/PostgreSQL)
 
 ```shell script
@@ -50,6 +50,8 @@ CREATE EXTENSION cube;
 CREATE EXTENSION earthdistance;
 # http://localhost:8080/distances/by-points?from=4929&to=5254
 # http://localhost:8080/distances/by-cube?from=4929&to=5254
+```
+
 
 ### Query Earth Distance
 Point
@@ -57,11 +59,10 @@ Point
 select ((select lat_lon from cidade where id = 4929) <@> (select lat_lon from cidade where id=5254)) as distance;
 ```
 
-###Heroku
+#### Heroku
 heroku addons:create heroku-postgresql
-#Enter containner bash
+#### Enter containner bash
 ```shell
-#heroku
 docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
 
 psql -h heroku.database-url -U user_database name_database -f /tmp/pais.sql
